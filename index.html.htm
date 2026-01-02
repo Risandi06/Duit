@@ -205,7 +205,7 @@ function simpanPendaftaran(){
 
 function tambah(){
   let nom=parseInt(nominal.value.replace(/\./g,""));
-  if(jenis.value==="keluar" && nom>500000){
+  if(jenis.value==="Out" && nom>500000){
     tampilModal();
     return;
   }
@@ -231,7 +231,7 @@ function render(){
   let m=0,k=0;
   list.innerHTML="";
   data.forEach(d=>{
-    d.jenis==="masuk"?m+=d.nom:k+=d.nom;
+    d.jenis==="In"?m+=d.nom:k+=d.nom;
     list.innerHTML+=`
       <tr>
         <td>${d.ket}</td>
@@ -267,5 +267,6 @@ if ("serviceWorker" in navigator) {
 
 </body>
 </html>
+
 
 
