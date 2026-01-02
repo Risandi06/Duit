@@ -1,2 +1,0 @@
-# Duit
-cair
